@@ -200,3 +200,41 @@ h1 {
         margin-right: 28px;
     }
 }
+
+/* Alinha o conteúdo dos botões à esquerda */
+.btn {
+    justify-content: flex-start;   /* texto + ícone vão para a esquerda */
+    text-align: left;              /* garante alinhamento do texto */
+    padding-left: 18px;            /* dá um respiro na esquerda */
+}
+
+/* Ícone à esquerda, texto centralizado */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* centraliza o texto */
+    position: relative;        /* permite posicionar o ícone */
+}
+
+/* Ícone fixo à esquerda */
+.btn i {
+    position: absolute;
+    left: 18px;                /* distância da borda esquerda */
+}
+
+/* Elemento fantasma para equilibrar o centro */
+.btn::after {
+    content: "";
+    width: 20px;               /* mesmo tamanho do ícone */
+    height: 20px;
+    position: absolute;
+    right: 18px;               /* espelha o ícone */
+}
+
+/* Ícone à esquerda para TODOS os tipos (i, svg, tiktok) */
+.btn i,
+.btn svg,
+.btn .fa-tiktok {
+    position: absolute;
+    left: 18px;
+}
